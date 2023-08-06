@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity"
+	minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0"
+	prefWidth="1186.0" stylesheets="@style.css"
+	xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+	fx:controller="application.DelWindowController">
+
+	<center>
+		<TableView fx:id="tb" prefHeight="611.0" prefWidth="474.0"
+			BorderPane.alignment="CENTER">
+			<BorderPane.margin>
+				<Insets bottom="10.0" right="10.0" top="10.0" />
+			</BorderPane.margin>
+		</TableView>
+	</center>
+	<left>
+		<VBox prefHeight="611.0" prefWidth="324.0"
+			BorderPane.alignment="CENTER">
+			<children>
+				<Label text="手順１：プルダウンから年月を選択して修正ボタンを押す" />
+				<HBox prefHeight="18.0" prefWidth="352.0">
+					<children>
+						<Label>
+							<HBox.margin>
+								<Insets top="5.0" />
+							</HBox.margin>
+						</Label>
+						<ComboBox fx:id="cmb1" promptText="年">
+							<HBox.margin>
+								<Insets right="10.0" />
+							</HBox.margin>
+						</ComboBox>
+						<ComboBox fx:id="cmb2" prefHeight="25.0" promptText="月">
+							<HBox.margin>
+								<Insets right="10.0" />
+							</HBox.margin>
+						</ComboBox>
+						<Button fx:id="btn1" mnemonicParsing="false"
+							onAction="#ButtonEvent" prefHeight="25.0" text="を修正する" />
+					</children>
+				</HBox>
+				<Label text="手順２：左の一覧からデータIDを参照して入力し削除ボタンを押す">
+					<VBox.margin>
+						<Insets top="20.0" />
+					</VBox.margin>
+				</Label>
+				<HBox prefHeight="15.0" prefWidth="312.0">
+					<children>
+						<TextField fx:id="txf1" promptText="IDを入力">
+							<HBox.margin>
+								<Insets right="5.0" />
+							</HBox.margin>
+						</TextField>
+						<Button fx:id="btn2" mnemonicParsing="false"
+							onAction="#ButtonEvent2" text="削除" />
+					</children>
+					<VBox.margin>
+						<Insets top="5.0" />
+					</VBox.margin>
+				</HBox>
+				<Label prefHeight="17.0" prefWidth="362.0"
+					text="手順３：全ての削除が完了したら閉じるボタンを押す">
+					<VBox.margin>
+						<Insets top="20.0" />
+					</VBox.margin>
+				</Label>
+				<Button fx:id="btn3" mnemonicParsing="false"
+					onAction="#WindowClose" text="閉じる">
+					<VBox.margin>
+						<Insets left="266.0" />
+					</VBox.margin>
+				</Button>
+			</children>
+			<BorderPane.margin>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</BorderPane.margin>
+		</VBox>
+	</left>
+</BorderPane>

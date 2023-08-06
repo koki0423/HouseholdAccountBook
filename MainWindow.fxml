@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="595.0" prefWidth="1077.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+	<left>
+		<VBox prefHeight="569.0" prefWidth="380.0" BorderPane.alignment="CENTER">
+			<children>
+				<DatePicker fx:id="dp" prefHeight="25.0" prefWidth="314.0" promptText="日付" />
+				<TextField fx:id="txf1" promptText="場所(空白可)">
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</TextField>
+				<HBox prefHeight="6.0" prefWidth="346.0">
+					<children>
+						<ComboBox fx:id="cmb3" prefHeight="25.0" prefWidth="173.0" promptText="目的" />
+					</children>
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</HBox>
+				<TextField fx:id="txf3" promptText="金額">
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</TextField>
+				<HBox prefHeight="37.0" prefWidth="302.0">
+					<children>
+						<Button fx:id="btn1" mnemonicParsing="false" onAction="#ButtonEvent" prefHeight="38.0" prefWidth="54.0" text="登録" />
+						<Label text="Status: ">
+							<HBox.margin>
+								<Insets left="5.0" top="10.0" />
+							</HBox.margin>
+						</Label>
+						<Label fx:id="lb1" text="　　">
+							<HBox.margin>
+								<Insets right="50.0" top="10.0" />
+							</HBox.margin>
+						</Label>
+						<MenuButton mnemonicParsing="false" prefHeight="59.0" prefWidth="110.0" text="データの修正">
+							<items>
+								<MenuItem mnemonicParsing="false" onAction="#ButtonEvent3" text="修正" />
+								<MenuItem mnemonicParsing="false" onAction="#ButtonEvent4" text="削除" />
+							</items>
+							<HBox.margin>
+								<Insets right="10.0" />
+							</HBox.margin>
+						</MenuButton>
+					</children>
+					<VBox.margin>
+						<Insets bottom="10.0" top="10.0" />
+					</VBox.margin>
+				</HBox>
+				<Line endX="200" startX="-100.0">
+					<VBox.margin>
+						<Insets bottom="10.0" top="20.0" />
+					</VBox.margin>
+				</Line>
+				<HBox prefHeight="18.0" prefWidth="360.0">
+					<children>
+						<ComboBox fx:id="cmb1" prefHeight="28.0" prefWidth="102.0" promptText="年を選択">
+							<HBox.margin>
+								<Insets right="5.0" />
+							</HBox.margin>
+						</ComboBox>
+						<ComboBox fx:id="cmb2" prefHeight="28.0" prefWidth="102.0" promptText="月を選択">
+							<HBox.margin>
+								<Insets right="5.0" />
+							</HBox.margin>
+						</ComboBox>
+						<Button fx:id="btn2" mnemonicParsing="false" onAction="#ButtonEvent2" prefHeight="28.0" prefWidth="102.0" text=" データ見る" />
+					</children>
+					<opaqueInsets>
+						<Insets />
+					</opaqueInsets>
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="0.0" prefWidth="301.0">
+					<children>
+						<Label text="収入：">
+							<font>
+								<Font size="24.0" />
+							</font>
+						</Label>
+						<Label fx:id="lb2" text="0">
+							<HBox.margin>
+								<Insets />
+							</HBox.margin>
+							<font>
+								<Font size="24.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="0.0" prefWidth="301.0">
+					<children>
+						<Label text="支出：">
+							<font>
+								<Font size="24.0" />
+							</font>
+						</Label>
+						<Label fx:id="lb3" text="0">
+							<font>
+								<Font size="24.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</HBox>
+				<HBox prefHeight="0.0" prefWidth="301.0">
+					<children>
+						<Label text="収支：">
+							<font>
+								<Font size="24.0" />
+							</font>
+						</Label>
+						<Label fx:id="lb4" text="0">
+							<font>
+								<Font size="24.0" />
+							</font>
+						</Label>
+					</children>
+					<VBox.margin>
+						<Insets top="10.0" />
+					</VBox.margin>
+				</HBox>
+			</children>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+			<padding>
+				<Insets right="20.0" />
+			</padding>
+			<BorderPane.margin>
+				<Insets left="10.0" top="5.0" />
+			</BorderPane.margin>
+		</VBox>
+	</left>
+	<center>
+		<TableView fx:id="tb" prefHeight="553.0" prefWidth="420.0" BorderPane.alignment="CENTER">
+			<BorderPane.margin>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</BorderPane.margin>
+		</TableView>
+	</center>
+	<top>
+		<MenuBar BorderPane.alignment="CENTER">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" text="＊テキストファイルにエクスポート" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="マニュアル">
+					<items>
+						<MenuItem mnemonicParsing="false" text="＊使い方" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="設定">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#ButtonEvent5" text="接続設定" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+	</top>
+</BorderPane>

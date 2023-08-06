@@ -1,0 +1,33 @@
+.root {
+    -fx-base: #FFDAFB; /* Lavender Pink */
+    -fx-background: #FFE8F7; /* Thistle Pink */
+}
+
+.button {
+    -fx-text-fill: #8B0000; /* Dark Red */
+    -fx-background-color: #FFB7D5; /* Carnation Pink */
+}
+
+.button:hover {
+    -fx-background-color: #FFDEF0; /* Pink Lace */
+}
+
+.text-field, .combo-box-base {
+    -fx-background-color: #FFFCF9; /* Ivory Pink */
+}
+
+.menu-bar {
+    -fx-background-color: #FFB7D5; /* Carnation Pink */
+}
+
+.menu {
+    -fx-text-fill: #8B0000; /* Dark Red */
+}
+
+.menu-item {
+    -fx-text-fill: #8B0000; /* Dark Red */
+}
+
+.label {
+    -fx-text-fill: #8B0000; /* Dark Red */
+}
